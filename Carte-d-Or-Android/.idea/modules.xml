@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Carted'OrAndroid.iml" filepath="$PROJECT_DIR$/Carted'OrAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Carte-d-Or-Android.iml" filepath="$PROJECT_DIR$/Carte-d-Or-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
