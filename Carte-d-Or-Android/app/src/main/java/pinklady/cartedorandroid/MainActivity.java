@@ -20,10 +20,11 @@ import com.google.android.gms.location.places.Places;
 
 public class MainActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener {
+
     private static final String LOG_TAG = "PlacesAPIActivity";
     private static final int GOOGLE_API_CLIENT_ID = 0;
     private static final String TAG = "MainActivity";
-    private GoogleApiClient mGoogleApiClient;
+    private static GoogleApiClient mGoogleApiClient;
     private static final int PERMISSION_REQUEST_CODE = 100;
 
     private Activity mActivity;
@@ -95,6 +96,10 @@ public class MainActivity extends AppCompatActivity implements
     protected void onStop() {
         mGoogleApiClient.disconnect();
         super.onStop();
+    }
+
+    public static GoogleApiClient getmGoogleApiClient(){
+        return mGoogleApiClient;
     }
 
 }

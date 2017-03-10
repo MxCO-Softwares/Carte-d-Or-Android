@@ -97,6 +97,9 @@ public class PlacePickerFragment extends Fragment {
             content += "Phone: " + place.getPhoneNumber();
         }
         Log.d(TAG, content);
+        Intent intent = new Intent(getActivity(), PlaceDetails.class);
+        intent.putExtra("ID", place.getId());
+        startActivity(intent);
 //        mTextView.setText( content );
     }
 }

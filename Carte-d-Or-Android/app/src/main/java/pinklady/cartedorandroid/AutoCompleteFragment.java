@@ -1,5 +1,6 @@
 package pinklady.cartedorandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -58,6 +59,12 @@ public class AutoCompleteFragment extends Fragment {
         autoCompView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (mAdapter.getItem(position)!= null && mAdapter.getItem(position).getPlaceId() != null)
+                {
+                    Intent intent = new Intent(getActivity(), PlaceDetails.class);
+                    intent.putExtra("ID", mAdapter.getItem(position).getPlaceId());
+                    startActivity(intent);
+                }
             }
         });
 
